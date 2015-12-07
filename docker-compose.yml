@@ -1,0 +1,21 @@
+mc-mysql:
+  image: "mysql:5.7"
+  log_driver: "none"
+  environment:
+    MYSQL_ROOT_PASSWORD: metadata
+    MYSQL_DATABASE: metadata
+    MYSQL_PASSWORD: metadata
+    MYSQL_USER: metadata
+mc-es:
+  image: "elasticsearch:2.0.0"
+  log_driver: "none"
+mc:
+  image: "metadata/registry:2"
+  links:
+    - "mc-mysql"
+    - "mc-es"
+  environment:
+    CATALINA_OPTS: "-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1g -Xmx2g -XX:NewSize=512m -XX:MaxNewSize=512m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:+DisableExplicitGC"
+  ports:
+    - "80:8080"
+  env_file: metadata_url.env
