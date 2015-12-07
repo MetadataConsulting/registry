@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 if [ "$(uname)" == "Darwin" ] || [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ] ; then
     DOCKER_MACHINE_IP="${DOCKER_HOST/tcp:\/\//}"
     DOCKER_MACHINE_IP="${DOCKER_MACHINE_IP/:2376/}"
