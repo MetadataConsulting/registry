@@ -10,4 +10,4 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
     DOCKER_MACHINE_IP=$(dig +short myip.opendns.com @resolver1.opendns.com || ip route get 8.8.8.8 | head -1 | cut -d' ' -f8 || ip a s|sed -ne '/127.0.0.1/!{s/^[ \t]*inet[ \t]*\([0-9.]\+\)\/.*$/\1/p}')
 fi
 
-echo -e "# this file is managed automatically by init.sh script do not edit manually\nVIRTUAL_HOST=$DOCKER_MACHINE_IP" > metadata_url.env
+echo -e "# this file is managed automatically by init.sh script do not edit manually\nVIRTUAL_HOST=$DOCKER_MACHINE_IP" > ip.env
