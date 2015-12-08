@@ -78,6 +78,13 @@ There are three default users with different roles initially (username/password)
   * curator/curator - metadata curator with ability to read, create and update data models
   * admin/admin - user with full admin access
 
+<!--- ## Running against Existing Database --->
+<!--- ## Discourse Integration --->
+<!--- ## S3 Integration --->
+<!--- ## OAuth 2.0 Integration --->
+<!--- ## Further Customization using mc-config.groovy -->
+<!--- ## Creating Custom Image using mc-config.groovy -->
+
 ## Deploying to Google Compute Engine
 
 With Docker Machine you can create multiple machines which can point to other computers.
