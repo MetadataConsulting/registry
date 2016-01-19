@@ -9,6 +9,10 @@ mc-mysql:
 mc-es:
   image: "elasticsearch:2.0.0"
   log_driver: "none"
+mc-storage:
+  image: "busybox"
+  volumes:
+    - /usr/local/tomcat/storage
 mc:
   image: "metadata/registry:2"
   links:
@@ -16,9 +20,10 @@ mc:
     - "mc-es"
   environment:
     CATALINA_OPTS: "-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1g -Xmx2g -XX:NewSize=512m -XX:MaxNewSize=512m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:+DisableExplicitGC"
-    MC_USE_LOCAL_STORAGE: true
+    MC_USE_LOCAL_STORAGE: "true"
   ports:
     - "80:8080"
-  volumes:
-    - ./storage:/usr/local/tomcat/storage
+  volumes_from:
+    - mc-storage
   env_file: ip.env
+  env_file: mail.env
