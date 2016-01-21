@@ -25,5 +25,7 @@ mc:
     - "80:8080"
   volumes_from:
     - mc-storage
-  env_file: ip.env
-  env_file: mail.env
+  env_file:
+    - ip.env
+    - mail.env
+    - appearance.env
