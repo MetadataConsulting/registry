@@ -63,6 +63,9 @@ command. When the command fails or if you want to set the hostname of the regist
 yourself then edit the `ip.env` file manually. Replace `localhost` string with
 the desired host or the `<METADATA HOST>` IP address obtained from the initial step.
 
+User registration requires having mail server setup properly. Follow instruction in `mail.evn` file
+to setup the mail server properly.
+
 When the host for metadata registry is set you can run the docker compose command:
 
 ```shell
