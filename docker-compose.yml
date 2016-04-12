@@ -7,7 +7,7 @@ mc-mysql:
     MYSQL_PASSWORD: metadata
     MYSQL_USER: metadata
 mc-es:
-  image: "elasticsearch:2.0.0"
+  image: "elasticsearch:2.1.2"
   log_driver: "none"
 mc-storage:
   image: "busybox"
@@ -29,3 +29,5 @@ mc:
     - ip.env
     - mail.env
     - appearance.env
+    - google.env
+    - mc.env
