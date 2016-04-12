@@ -66,10 +66,12 @@ the desired host or the `<METADATA HOST>` IP address obtained from the initial s
 User registration requires having mail server setup properly. Follow instruction in `mail.evn` file
 to setup the mail server properly.
 
+If you want to change the appearance of the application then follow the instructions in  `appearance.env` file.
+
 When the host for metadata registry is set you can run the docker compose command:
 
 ```shell
-docker-compose up
+docker-compose up -d
 ```
 
 This will start all the required services such as database inside Docker.
@@ -120,3 +122,13 @@ Click `Create a firewall rule` and create new rule with *Name* `http`,
 
 After that you should be able to navigate to `<METADATA HOST>` in your browser
 and see the application running.
+
+## Application Upgrade
+
+To use newer version of model catalogue available you have to kill and remove the `mc` services and restart everything.
+
+```
+docker-compose kill mc
+docker-compose rm -f mc
+docker-compose up -d
+```
