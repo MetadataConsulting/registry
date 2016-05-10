@@ -125,13 +125,10 @@ and see the application running.
 
 ## Application Upgrade
 
-To use newer version of model catalogue available you have to kill and remove the `mc` services and restart everything.
+You can use `upgrade.sh` script to upgrade to latest version of the model catalogue.
 
 ```
-docker-compose kill mc
-docker-compose rm -f mc
-docker-compose pull mc
-docker-compose up -d
+./upgrade.sh
 ```
 
 ## Initializing the database
