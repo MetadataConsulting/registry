@@ -132,3 +132,7 @@ docker-compose kill mc
 docker-compose rm -f mc
 docker-compose up -d
 ```
+
+## Initializing the database
+
+Put your initialization script inside the `data` folder of this repository to load it on mysql server startup.

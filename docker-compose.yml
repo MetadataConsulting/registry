@@ -6,6 +6,8 @@ mc-mysql:
     MYSQL_DATABASE: metadata
     MYSQL_PASSWORD: metadata
     MYSQL_USER: metadata
+  volumes:
+    - ./data:/docker-entrypoint-initdb.d
 mc-es:
   image: "elasticsearch:2.1.2"
   log_driver: "none"
