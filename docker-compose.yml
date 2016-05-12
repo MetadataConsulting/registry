@@ -11,6 +11,7 @@ mc-mysql:
 mc-es:
   image: "elasticsearch:2.1.2"
   log_driver: "none"
+  command: [elasticsearch, -Des.threadpool.bulk.queue_size=3000]
 mc-storage:
   image: "busybox"
   volumes:
