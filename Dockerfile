@@ -16,3 +16,5 @@ RUN set -x \
   && rm -rf /usr/local/tomcat/webapps/host-manager \
   && curl -fSL "$MC_WAR_URL" -o /usr/local/tomcat/webapps/ROOT.war \
   && curl -fSL "$MC_CONFIG_URL" -o /usr/local/tomcat/conf/mc-config.groovy
+
+EXPOSE 8080
