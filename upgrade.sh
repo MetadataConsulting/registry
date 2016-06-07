@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-docker-compose kill mc
-docker-compose rm -f mc
-docker-compose pull mc
+SERVICE=${1:-mc}
+
+docker-compose kill "$SERVICE"
+docker-compose rm -f "$SERVICE"
+docker-compose pull "$SERVICE"
 docker-compose up -d
