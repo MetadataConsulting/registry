@@ -11,7 +11,7 @@ mc-mysql:
 mc-es:
   image: "elasticsearch:2.1.2"
   log_driver: "none"
-  command: [elasticsearch, -Des.threadpool.bulk.queue_size=3000]
+  command: [elasticsearch, -Des.threadpool.bulk.queue_size=5000]
 mc-storage:
   image: "busybox"
   volumes:
@@ -24,8 +24,6 @@ mc:
   environment:
     CATALINA_OPTS: "-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1g -Xmx2g -XX:NewSize=512m -XX:MaxNewSize=512m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:+DisableExplicitGC"
     MC_USE_LOCAL_STORAGE: "true"
-  ports:
-    - "80:8080"
   volumes_from:
     - mc-storage
   env_file:
