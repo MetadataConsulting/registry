@@ -9,9 +9,8 @@ mc-mysql:
   volumes:
     - ./data:/docker-entrypoint-initdb.d
 mc-es:
-  image: "elasticsearch:2.1.2"
+  image: "metadata/registry-elasticsearch:2"
   log_driver: "none"
-  command: [elasticsearch, -Des.threadpool.bulk.queue_size=5000, -Des.action.auto_create_index=false, -Des.index.mapper.dynamic=false]
 mc-storage:
   image: "busybox"
   volumes:
