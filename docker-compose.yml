@@ -31,3 +31,5 @@ mc:
     - appearance.env
     - google.env
     - mc.env
+  ports:
+   - "80:8080"
