@@ -49,16 +49,16 @@ There are some default users with different roles initially (username/password)
   * curator/curator - metadata curator with ability to read, create and update data models
   * admin/admin - user with admin access to the application
 
-## Customizaton
+## Customizaton _(optional)_
 You can customize the application by editing the `docker-compose.override.yml` file. See the comments inside this file for the
 reference.
 
-## Application Upgrade
+## Application Upgrade _(optional)_
 You can use `upgrade.sh` script to upgrade to latest version of the model catalogue.
 
 ```
 ./upgrade.sh
 ```
 
-## Initializing the database
-Put your initialization script inside the `data` folder of this repository to load it on mysql server startup.
+## Initializing the Database _(optional)_
+Put your MySQL dump file inside the `data` folder of this repository if you want to preload the Metadata Registry with existing data
