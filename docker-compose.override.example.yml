@@ -9,6 +9,9 @@ mc:
 
     ## Change the hostname
     METADATA_HOST: localhost:11179
+    
+    ## Setup test accounts
+    METADATA_DEMO: "true"
 
     ############################################################################
     ## Mail settings to allow signup
