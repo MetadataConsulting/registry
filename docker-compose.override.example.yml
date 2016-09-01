@@ -1,0 +1,59 @@
+mc:
+  ports:
+    - "11179:8080"
+  environment:
+    ############################################################################
+    ## For complete list of available variables please visit
+    ## https://github.com/MetadataConsulting/ModelCataloguePlugin/blob/2.x/docs/deployment/environment.adoc
+    ############################################################################
+
+    ## Change the hostname
+    METADATA_HOST: localhost:11179
+
+    ############################################################################
+    ## Mail settings to allow signup
+    ############################################################################
+
+    ## Allow user registration
+    # MC_ALLOW_SIGNUP: true
+
+    ## The email from which to send emails. MUST be set if mail server is enabled
+    # MC_MAIL_FROM:
+
+    ## Mail server host, must always be set even if 'localhost'
+    # MC_MAIL_HOST:
+
+    ## Mail server port
+    # MC_MAIL_PORT:
+
+    ## Mail server username
+    # MC_MAIL_USERNAME:
+
+    ## Mail server password
+    # MC_MAIL_PASSWORD:
+
+    ## Additional mail configuration as JSON, see https://grails.org/plugin/mail
+    # MC_MAIL_PROPS:
+
+    ############################################################################
+    ## Customize the environment
+    ############################################################################
+
+    ## The name of the application shown in the navigation bar
+    # MC_NAME: "Metadata Registry Test"
+
+    ## The html contained in large gray box
+    # MC_WELCOME_JUMBO:
+
+    ## The html contained after the grey box
+    # MC_WELCOME_INFO:
+
+    ############################################################################
+    ## Set your Google client key and client secret to enable logging in using Google
+    ############################################################################
+
+    ## Google Client Key
+    # MC_GOOGLE_KEY: xyz.apps.googleusercontent.com
+
+    # Google Client Secret
+    # MC_GOOGLE_SECRET: s3cr3t

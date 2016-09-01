@@ -25,9 +25,3 @@ mc:
     MC_USE_LOCAL_STORAGE: "true"
   volumes_from:
     - mc-storage
-  env_file:
-    - ip.env
-    - mail.env
-    - appearance.env
-    - google.env
-    - mc.env
