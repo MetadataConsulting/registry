@@ -12,6 +12,9 @@ mc:
     
     ## Setup test accounts
     METADATA_DEMO: "true"
+    
+    ## Preloaded models (currently only Java Basic Types)
+    MC_PRELOAD: "[{\"name\" : \"Java Basic Types\", \"url\" : \"https://s3-eu-west-1.amazonaws.com/datamodels.metadata.org.uk/Java.mc.xml\"}]"
 
     ############################################################################
     ## Mail settings to allow signup
