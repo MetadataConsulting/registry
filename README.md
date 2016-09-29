@@ -48,6 +48,7 @@ There are some default users with different roles initially (username/password)
   * user/user - regular read only user
   * curator/curator - metadata curator with ability to read, create and update data models
   * admin/admin - user with admin access to the application
+  * supervisor/supervisor - user with supervisor access to the application (can reindex catalogue, see server stats)
 
 ## Customizaton _(optional)_
 You can customize the application by editing the `docker-compose.override.yml` file. See the comments inside this file for the
@@ -61,4 +62,5 @@ You can use `upgrade.sh` script to upgrade to latest version of the model catalo
 ```
 
 ## Initializing the Database _(optional)_
-Put your MySQL dump file inside the `data` folder of this repository if you want to preload the Metadata Registry with existing data
+Put your MySQL dump file inside the `data` folder of this repository if you want to preload the Metadata Registry with existing data.
+If you preload the database you need to reindex the search engine by running _Reindex Catalogue_ action from the admin menu (cog).
