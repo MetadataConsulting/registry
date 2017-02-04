@@ -2,7 +2,7 @@ FROM tomcat:8-jre8
 
 MAINTAINER Vladimir Orany <vladimir@orany.cz>
 
-ENV MC_VERSION 2.1.18
+ENV MC_VERSION 2.1.19
 ENV MC_WAR_URL https://github.com/MetadataRegistry/ModelCataloguePlugin/releases/download/$MC_VERSION/mc.war
 ENV MC_CONFIG_URL https://github.com/MetadataRegistry/ModelCataloguePlugin/releases/download/$MC_VERSION/mc-config.groovy
 
